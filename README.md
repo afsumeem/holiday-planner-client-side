@@ -1,5 +1,11 @@
-# Getting Started with Create React App
+# Web Template of Holiday Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Link of  [Holiday Planner](https://holiday-planner-29768.web.app/home).
 
 ## Description
+
+* Holiday Planner website is created by React app.
+* This website offers to users online tour booking for traveling to many countries which we provide in the popular packages section.
+* Users Can see all information about popular packages on this website.
+* Using this website users Can get any travel related supports  from the Holiday Planner team.
+* Users can get all the facilities of Holiday Planner by using this website. 
