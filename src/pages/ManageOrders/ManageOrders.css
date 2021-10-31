@@ -2,3 +2,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+
+/*============== Responsive Media Query ================*/
+
+@media only screen and (max-width: 600px) {
+  .manage-orders-container{
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(1, 1fr);
+}
+}

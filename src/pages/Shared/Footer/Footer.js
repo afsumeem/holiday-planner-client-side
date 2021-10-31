@@ -3,12 +3,15 @@ import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faFacebook, faInstagram, faSkype, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <div className="bg-dark">
             <div className="container py-4">
                 <div className="row">
+
+                    {/* footer first section */}
                     <div className="col-md-4 col-sm-12 text-white">
                         <h2>Holiday Planner</h2>
                         <hr className="w-75 mx-auto" />
@@ -36,6 +39,8 @@ const Footer = () => {
 
                         </Button>
                     </div>
+
+                    {/* footer gallery section */}
                     <div className="col-md-4 col-sm-12 text-white">
                         <h2 >Gallery</h2>
                         <hr className="w-50 mx-auto" />
@@ -64,6 +69,8 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* footer contact section */}
                     <div className="col-md-4 col-sm-12 text-white">
                         <h2 >Contacts</h2>
                         <hr className="w-50 mx-auto" />
@@ -97,9 +104,11 @@ const Footer = () => {
                                 <p>support@hs.com </p>
                             </div>
                         </div>
-                        <Button className="w-50 mt-3 " variant="outline-info" size="sm">
-                            CONTACT US
-                        </Button>
+                        <NavLink to="/signin">
+                            <Button className="w-50 mt-3 " variant="outline-info" size="sm">
+                                CONTACT US
+                            </Button>
+                        </NavLink>
 
                     </div>
                 </div>

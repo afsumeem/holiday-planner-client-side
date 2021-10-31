@@ -66,7 +66,11 @@ const SignIn = () => {
                                 type="email"
 
                             />
-                            <InputGroup.Text id="basic-addon2" className="bg-primary bg-opacity-75"><FontAwesomeIcon className="fs-5 text-white mx-3" icon={faUser} /></InputGroup.Text>
+                            <InputGroup.Text id="basic-addon2"
+                                className="bg-primary bg-opacity-75">
+                                <FontAwesomeIcon className="fs-5 text-white mx-3" icon={faUser} />
+                            </InputGroup.Text>
+
                         </InputGroup>
 
                         <InputGroup className="mb-3">
@@ -77,22 +81,32 @@ const SignIn = () => {
                                 onBlur={getUserPassword}
                                 type="password"
                             />
-                            <InputGroup.Text id="basic-addon2" className="bg-primary bg-opacity-75"><FontAwesomeIcon className="fs-5 text-white mx-3" icon={faLock} /></InputGroup.Text>
+
+                            <InputGroup.Text id="basic-addon2"
+                                className="bg-primary bg-opacity-75">
+                                <FontAwesomeIcon className="fs-5 text-white mx-3" icon={faLock} />
+                            </InputGroup.Text>
+
                         </InputGroup>
 
-                        <Button variant="primary" className="rounded w-100 mb-3" type="submit">Sign in</Button><br />
+                        <Button variant="primary"
+                            className="w-100 mb-3" type="submit">
+                            Sign in
+                        </Button><br />
 
                         <Button className="mb-3 link text-dark fw-bolder border-0 bg-transparent text-decoration-underline"
                             onClick={handleResetPassword}
-                        >Forgot password?
+                        >
+                            Forgot password?
                         </Button>
+
                         <br />
 
                     </Form>
 
                     {/* google sign in button */}
 
-                    <Button variant="outline-danger" className="rounded-circle mb-3" onClick={handleGoogleLogIn} type="submit"><FontAwesomeIcon className="fs-5" icon={faGoogle} /></Button><br />
+                    <Button variant="outline-danger" className="mb-3 fs-5 fw-bold" onClick={handleGoogleLogIn} type="submit"><FontAwesomeIcon icon={faGoogle} /> Sign in With Google</Button><br />
 
 
                     {/* signup button */}

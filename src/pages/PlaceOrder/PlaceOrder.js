@@ -15,6 +15,8 @@ const PlaceOrder = () => {
 
     const [packageDetails, setPackageDetails] = useState([]);
 
+    // fetch single package from api using id
+
     useEffect(() => {
         const url = `https://vast-dawn-82994.herokuapp.com/packages/${id}`
         fetch(url)
@@ -22,7 +24,7 @@ const PlaceOrder = () => {
             .then(data => setPackageDetails(data))
     }, []);
 
-
+    // handle submit
     const onSubmit = data => {
 
         axios.post('https://vast-dawn-82994.herokuapp.com/orders', data)
@@ -38,6 +40,7 @@ const PlaceOrder = () => {
         <div className="container mt-5">
             <div className="row m-0 pt-5">
                 <div className="col-md-6">
+                    {/* package detail */}
                     <div className="border py-3 px-5">
 
                         <h2 className="mb-4">{packageDetails.name}</h2>

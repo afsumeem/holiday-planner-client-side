@@ -22,6 +22,7 @@ const MyOrder = () => {
             {/* title */}
             <h1 className="pt-5 text-white font-monospace">MY ORDERS</h1>
 
+            {/* map orders from api */}
             <div>
                 {
                     orders

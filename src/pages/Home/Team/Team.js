@@ -8,7 +8,7 @@ const Team = () => {
             <div className="row">
 
                 {/* Team section details */}
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-12">
                     <h4 className="font-monospace text-danger mt-3 ">O U R &nbsp;T E A M</h4>
                     <h3 className="mt-4">MEET OUR AMAZING TEAM</h3>
                     <p className="mt-4 ">The secret to our success lies in our people. We have a strong team of travel professionals with extensive industry experience and outstanding customer service skills. The secret to our success lies in our people. We have a strong team of travel professionals with extensive industry experience and outstanding customer service skills.</p>
@@ -16,14 +16,14 @@ const Team = () => {
 
 
                 {/* Team Thumbnails */}
-                <div className="col-md-3 team-thumbnail mb-2">
+                <div className="col-md-3 col-sm-12 mx-auto team-thumbnail mb-2">
                     <img src={"https://i.ibb.co/PjV2y9p/traveller-2.jpg"} className="img-fluid" alt="" />
                 </div>
-                <div className="col-md-3 team-thumbnail  mb-2">
+                <div className="col-md-3 col-sm-12 mx-auto team-thumbnail mb-2">
                     <img src={"https://i.ibb.co/LZpxGYY/traveller-3.jpg"} className="img-fluid" alt="" />
                 </div>
-                <div className="col-md-3 team-thumbnail  mb-2">
-                    <img src={"https://i.ibb.co/4N8tDqD/traveller-1.jpg"} className="img-fluid w-100" alt="" />
+                <div className="col-md-3 col-sm-12 mx-auto team-thumbnail mb-2">
+                    <img src={"https://i.ibb.co/PjV2y9p/traveller-2.jpg"} className="img-fluid" alt="" />
                 </div>
 
             </div>

@@ -19,6 +19,8 @@ const Packages = () => {
             .finally(() => setIsLoading(false))
     }, []);
 
+    // set loader
+
     if (isLoading) {
 
         return <div class="d-flex justify-content-center mt-5">

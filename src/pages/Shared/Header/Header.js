@@ -10,7 +10,7 @@ const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <div>
-
+            {/* menu bar */}
             <Navbar fixed="top" bg="dark" className="bg-opacity-75 py-3" expand="lg">
                 <Container>
 
@@ -21,7 +21,6 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <NavLink to="/home" className="text-decoration-none mx-3 rounded py-2 px-2 text-white  menu-item d-flex align-items-center">Home</NavLink>
-                            <NavLink to="/blog" className="text-decoration-none mx-3 rounded py-2 px-2 text-white  menu-item d-flex align-items-center">Blog</NavLink>
                             <NavLink to="/about" className="text-decoration-none mx-3 rounded py-2 px-2 text-white  menu-item d-flex align-items-center">About us</NavLink>
 
 
@@ -30,31 +29,30 @@ const Header = () => {
 
                             {user.email
                                 ?
-                                <Navbar.Text className="d-flex">
+                                <>
                                     <NavLink className="text-decoration-none mx-2 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/myorder">My Orders</NavLink>
 
                                     <NavLink className="text-decoration-none mx-2 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/manageorders">Manage Orders</NavLink>
 
                                     <NavLink className="text-decoration-none mx-2 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/addpackage">New Package</NavLink>
-                                    <Navbar.Text className="text-info fw-bolder mx-2">
+                                    <Navbar.Text className="text-info text-start fw-bolder mx-2">
                                         <FontAwesomeIcon className="fs-6 me-1" icon={faUser} />
                                         {user.displayName && user.displayName}
                                     </Navbar.Text>
-                                </Navbar.Text>
+                                </>
 
-                                :
+                                : <>
 
-                                <NavLink className="text-decoration-none mx-3 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/signin">Sign in</NavLink>
+                                    <NavLink className="text-decoration-none mx-3 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/signin">Sign in</NavLink> </>
+
                             }
+                            {user.email ?
 
-
-                            {user.email
-                                ?
                                 <NavLink onClick={logOut} className="text-decoration-none mx-3 py-2 rounded px-2 text-white  d-flex align-items-center  menu-item" to="/home">Logout</NavLink>
                                 :
                                 <NavLink className="text-decoration-none rounded py-2 px-2 mx-3 text-white  d-flex align-items-center  menu-item" to="/signup">Sign up</NavLink>
-                            }
 
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

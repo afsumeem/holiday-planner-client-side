@@ -64,14 +64,18 @@ const MySingleOrder = (props) => {
 
 
 
-            {/* modal */}
+            {/* Confirmation alert */}
             <Modal show={show} onHide={handleClose}>
 
-                <Modal.Body>Are you sure?</Modal.Body>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                </div>
+                <Modal.Body>Are you sure you want to cancel this order? This action cannot be undone and you will be unable to recover any data.</Modal.Body>
+
                 <Modal.Footer>
 
                     <Button variant="secondary" onClick={() => { handleDeleteOrder(_id) }}>
-                        Yes
+                        Yes! Delete it
                     </Button>
                     <Button variant="primary" onClick={handleNoBtn}>
                         No

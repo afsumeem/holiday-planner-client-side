@@ -18,8 +18,11 @@ const ManageOrders = () => {
 
 
     return (
-        <div className="p-5">
+        <div className="p-5 ">
+            {/* manage all order title */}
             <h1 className="m-5">MANAGE ALL ORDER</h1>
+
+            {/* map all orders from api */}
             <div className="manage-orders-container ">
 
                 {

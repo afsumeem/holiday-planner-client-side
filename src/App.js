@@ -6,7 +6,6 @@ import NotFound from './pages/NotFound/NotFound';
 import Home from './pages/Home/Home/Home';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
-import Blog from './pages/Blog/Blog';
 import AboutUs from './pages/AboutUs/AboutUs';
 import AuthProvider from './Contexts/AuthProvider';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
@@ -31,10 +30,6 @@ function App() {
 
             <Route exact path="/home">
               <Home></Home>
-            </Route>
-
-            <Route path="/blog">
-              <Blog></Blog>
             </Route>
 
             <Route path="/about">
