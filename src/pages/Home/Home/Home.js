@@ -17,7 +17,6 @@ const Home = () => {
 
                     {/* carousel image */}
                     <img
-                        // className="d-block w-100"
                         src={"https://i.ibb.co/K594P7X/banner-1.jpg"}
                         alt="First slide"
                     />
@@ -34,7 +33,6 @@ const Home = () => {
 
                 <Carousel.Item className="banner">
                     <img
-                        // className="d-block w-100"
                         src={"https://i.ibb.co/FDzkKPV/banner-2.jpg"}
                         alt="Second slide"
                     />
@@ -49,7 +47,6 @@ const Home = () => {
 
                 <Carousel.Item className="banner">
                     <img
-                        // className="d-block w-100"
                         src={"https://i.ibb.co/smM10nZ/banner-3.jpg"}
                         alt="Third slide"
                     />
