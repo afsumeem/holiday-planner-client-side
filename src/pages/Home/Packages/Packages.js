@@ -9,11 +9,12 @@ const Packages = () => {
     //fetch data from api
 
     useEffect(() => {
-        const url = 'http://localhost:5000/packages';
+        const url = 'https://vast-dawn-82994.herokuapp.com/packages';
         fetch(url)
             .then(res => res.json())
             .then(data => setPackages(data))
-    }, [])
+    }, []);
+
     return (
         <div>
             {/* popular packages title */}
@@ -29,7 +30,6 @@ const Packages = () => {
                         <Package
                             key={singlePackage._id}
                             singlePackage={singlePackage}
-
                         >
                         </Package>)
                 }

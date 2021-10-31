@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 const Package = (props) => {
 
-    const { name, picture1, desc, duration, price } = props.singlePackage;
+    const { name, picture1, desc, duration, price, _id } = props.singlePackage;
 
     return (
         <div className="package-container">
@@ -28,7 +28,7 @@ const Package = (props) => {
                 </Card.Body>
 
                 <Card.Footer className="m-0 p-0">
-                    <NavLink to="/placeorder">
+                    <NavLink to={`/package/${_id}`}>
                         <Button className="w-100" variant="secondary">Book Now</Button>
                     </NavLink>
                 </Card.Footer>

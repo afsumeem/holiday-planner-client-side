@@ -1,0 +1,14 @@
+[debug] [2021-10-31T06:53:17.687Z] ----------------------------------------------------------------------
+[debug] [2021-10-31T06:53:17.692Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-10-31T06:53:17.692Z] CLI Version:   9.21.0
+[debug] [2021-10-31T06:53:17.693Z] Platform:      win32
+[debug] [2021-10-31T06:53:17.693Z] Node Version:  v14.17.1
+[debug] [2021-10-31T06:53:17.695Z] Time:          Sun Oct 31 2021 12:53:17 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-31T06:53:17.695Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-31T06:53:17.766Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-31T06:53:17.766Z] > authorizing via signed-in user (afsumeem@gmail.com)
+[debug] [2021-10-31T06:53:17.766Z] [iam] checking project holiday-planner-29768 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-31T06:53:17.769Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-31T06:53:17.769Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

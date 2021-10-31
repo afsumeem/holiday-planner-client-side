@@ -8,7 +8,7 @@ import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 const SignIn = () => {
-    const { signInUsingGoogle, handleResetPassword, getUserEmail, getUserPassword, handleRegistration, setUsers, setError } = useAuth();
+    const { signInUsingGoogle, handleResetPassword, getUserEmail, getUserPassword, setUsers, setError, userLogin } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -20,12 +20,25 @@ const SignIn = () => {
             .then((result) => {
                 setUsers(result.user)
                 history.push(redirect_uri);
-                console.log(result);
             })
             .catch((error) => {
                 setError(error.message)
             })
     };
+
+    //handle sign in using email and password
+    const userLoginWithEmailPass = (e) => {
+        e.preventDefault();
+        userLogin()
+            .then((result) => {
+                setUsers(result.user)
+                history.push(redirect_uri);
+            })
+            .catch((err) => {
+                setError(err.message)
+            })
+    };
+
 
     return (
         <div className="login-container" >
@@ -33,7 +46,8 @@ const SignIn = () => {
 
                 {/* login form section */}
                 <div className="form-container w-50 p-5 mx-auto bg-white bg-opacity-50">
-                    <Form onSubmit={handleRegistration}
+
+                    <Form onSubmit={userLoginWithEmailPass}
 
                         className="w-100 mx-auto pt-3">
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FloatingLabel, Form, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 
@@ -8,7 +9,14 @@ import useAuth from '../../hooks/useAuth';
 const SignUp = () => {
 
     // import functions useFirebase hook
-    const { getUserEmail, getUserPassword, handleRegistration, error, getUserName } = useAuth();
+    const { getUserEmail, getUserPassword, handleRegistration, error, getUserName, setUsers, setError, verifyEmail, setUserName } = useAuth();
+
+
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home';
+
+
 
     return (
         <div>
@@ -17,7 +25,24 @@ const SignUp = () => {
 
             <div className="form-container w-50 p-5 mx-auto bg-dark bg-opacity-50">
                 <h2 className="pt-5 text-uppercase text-white fw-bolder">Create an Account</h2>
-                <Form onSubmit={handleRegistration} className="w-75 mx-auto pt-5">
+
+                <Form onSubmit={(e) => {
+                    e.preventDefault();
+
+                    handleRegistration()
+                        .then((result) => {
+                            setUsers(result.user)
+                            history.push(redirect_uri);
+                            console.log(result);
+                            verifyEmail();
+                            setUserName();
+                        })
+                        .catch((error) => {
+                            setError(error.message)
+                        })
+                }}
+
+                    className="w-75 mx-auto pt-5">
                     <div className="row mb-3 text-danger">{error}</div>
 
 

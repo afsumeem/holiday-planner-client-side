@@ -11,8 +11,9 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import AuthProvider from './Contexts/AuthProvider';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
-import MyOrders from './pages/MyOrders/MyOrders';
 import ManageOrders from './pages/ManageOrders/ManageOrders';
+import AddPackage from './pages/AddPackage/AddPackage';
+import MyOrder from './pages/MyOrder/MyOrder/MyOrder';
 
 function App() {
   return (
@@ -40,8 +41,8 @@ function App() {
               <AboutUs></AboutUs>
             </Route>
 
-            <Route path="/myorders">
-              <MyOrders></MyOrders>
+            <Route path="/myorder">
+              <MyOrder></MyOrder>
             </Route>
 
             <Route path="/manageorders">
@@ -50,11 +51,13 @@ function App() {
               </ManageOrders>
             </Route>
 
-            <PrivateRoute path="/placeorder">
+            <PrivateRoute path="/package/:id">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute >
 
-
+            <Route path="/addpackage">
+              <AddPackage></AddPackage>
+            </Route>
 
             <Route path="/signin">
               <SignIn></SignIn>

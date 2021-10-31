@@ -31,9 +31,11 @@ const Header = () => {
                             {user.email
                                 ?
                                 <Navbar.Text className="d-flex">
-                                    <NavLink className="text-decoration-none mx-3 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/myorders">My Orders</NavLink>
+                                    <NavLink className="text-decoration-none mx-2 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/myorder">My Orders</NavLink>
 
-                                    <NavLink className="text-decoration-none mx-3 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/manageorders">Manage Orders</NavLink>
+                                    <NavLink className="text-decoration-none mx-2 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/manageorders">Manage Orders</NavLink>
+
+                                    <NavLink className="text-decoration-none mx-2 rounded py-2 px-2 text-white d-flex align-items-center menu-item" to="/addpackage">New Package</NavLink>
                                     <Navbar.Text className="text-info fw-bolder mx-2">
                                         <FontAwesomeIcon className="fs-6 me-1" icon={faUser} />
                                         {user.displayName && user.displayName}

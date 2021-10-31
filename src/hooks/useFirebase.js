@@ -33,8 +33,7 @@ const useFirebase = () => {
     };
 
 
-    const handleRegistration = e => {
-        e.preventDefault();
+    const handleRegistration = () => {
 
         if (password.length > 6) {
             setError("password should have 6 character")
@@ -44,44 +43,20 @@ const useFirebase = () => {
             return;
         }
 
-        console.log(email, password)
-        registerNewUser(email, password);
-        processLogin(email, password);
+        return createUserWithEmailAndPassword(auth, email, password)
+
     };
 
 
-    //register new user
-
-    const registerNewUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = (result.user);
-                console.log(user);
-                setError('');
-                verifyEmail();
-                setUserName();
-                console.log(setUserName);
-            })
-            .catch((error) => {
-                setError(error.message)
-            })
-    }
-
     //user sign in with email and password
-    const processLogin = (email, password) => {
+
+    const userLogin = () => {
+
         setIsLoading(true);
 
         return signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                setUsers(result.user);
-                setError('');
-                setUserName();
-                console.log(user);
-            })
-            .catch((error) => {
-                setError(error.message);
-            });
-    }
+
+    };
 
 
     //set user name
@@ -157,18 +132,18 @@ const useFirebase = () => {
         setError,
         name,
         email,
+        setUserName,
         password,
         handleResetPassword,
         getUserName,
         getUserEmail,
         getUserPassword,
         verifyEmail,
-        processLogin,
+        userLogin,
         handleRegistration,
         signInUsingGoogle,
         isLoading,
-        logOut,
-        registerNewUser
+        logOut
     }
 };
 
