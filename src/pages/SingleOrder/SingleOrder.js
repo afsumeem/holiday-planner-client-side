@@ -9,6 +9,7 @@ const SingleOrder = (props) => {
     const { name, Package, Address, email, Contact, _id, status } = props.order;
 
     const [show, setShow] = useState(false);
+
     const handleClose = () => setShow(false);
     const handleNoBtn = () => setShow(false);
 
@@ -49,8 +50,8 @@ const SingleOrder = (props) => {
                 if (data.modifiedCount > 0) {
                     alert('Order approved');
                     window.location.reload()
+
                 }
-                console.log(data);
             })
     };
 

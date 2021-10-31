@@ -75,8 +75,7 @@ const PlaceOrder = () => {
                             <br />
 
                             {/* order status */}
-                            <input className="mx-3 my-2 w-50 px-4 py-2" defaultValue="Pending..." readOnly {...register("status")} title="Order status" />
-
+                            <input className="mx-3 my-2 w-25 px-4 py-2" defaultValue="Pending..." readOnly {...register("status")} title="Order status" />
 
                             {/* submit button */}
                             < input className="d-block mx-auto mx-3 my-2 btn btn-info w-75" type="submit" value="Book now" />

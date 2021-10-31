@@ -46,25 +46,25 @@ const Footer = () => {
                         <hr className="w-50 mx-auto" />
                         <div className="row my-2">
                             <div className="col-md-1"></div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 col-sm-6 mb-1">
                                 <img className="rounded" src={"https://i.ibb.co/q0dHTZx/footer-gallery-1.jpg"} alt="" />
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 col-sm-6 mb-1">
                                 <img className="rounded" src={"https://i.ibb.co/d0LK8wx/footer-gallery-2.jpg"} alt="" />
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 col-sm-12 mb-1">
                                 <img className="rounded" src={"https://i.ibb.co/jbgLGnV/footer-gallery-3.jpg"} alt="" />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-1"></div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 col-sm-6 mb-1">
                                 <img className="rounded" src={"https://i.ibb.co/jbgLGnV/footer-gallery-3.jpg"} alt="" />
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 col-sm-6 mb-1">
                                 <img className="rounded" src={"https://i.ibb.co/q0dHTZx/footer-gallery-1.jpg"} alt="" />
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 col-sm-12 mb-3">
                                 <img className="rounded" src={"https://i.ibb.co/d0LK8wx/footer-gallery-2.jpg"} alt="" />
                             </div>
                         </div>
