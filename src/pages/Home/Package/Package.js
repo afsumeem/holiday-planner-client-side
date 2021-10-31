@@ -13,14 +13,21 @@ const Package = (props) => {
     return (
         <div className="package-container">
 
+
+            {/* single package card */}
+
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={picture1} />
                 <Card.Body className="text-start">
                     <Card.Title>{name}</Card.Title>
-                    <p className="text-primary"> <FontAwesomeIcon icon={faClock} /> {duration}</p>
-                    <FontAwesomeIcon icon={faPlane} />
-                    <FontAwesomeIcon icon={faFlag} />
-                    <FontAwesomeIcon icon={faGlobe} />
+
+                    <div className="d-flex mt-4">
+                        <p className="text-primary"> <FontAwesomeIcon icon={faClock} /> {duration}</p>
+                        <FontAwesomeIcon icon={faPlane} className="mx-auto fs-4" />
+                        <FontAwesomeIcon icon={faFlag} className="mx-auto fs-4" />
+                        <FontAwesomeIcon icon={faGlobe} className="mx-auto fs-4" />
+                    </div>
+
                     <Card.Text>
                         {desc}
                     </Card.Text>

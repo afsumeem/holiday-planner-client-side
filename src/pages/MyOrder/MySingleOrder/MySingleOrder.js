@@ -1,10 +1,32 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Card, Modal, Button } from 'react-bootstrap';
 import { faEnvelope, faMapMarker, faPhone, } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MySingleOrder = (props) => {
-    const { name, email, Contact, Package, Address, status } = props.order;
+    const { name, email, Contact, Package, Address, status, _id } = props.order;
+
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleNoBtn = () => setShow(false);
+
+    //DELETE order
+
+    const handleDeleteOrder = id => {
+        const url = `https://vast-dawn-82994.herokuapp.com/orders/${id}`;
+
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    window.location.reload();
+                }
+            })
+            .finally(setShow(false))
+    };
 
     return (
 
@@ -33,9 +55,29 @@ const MySingleOrder = (props) => {
                     </Card.Text>
                 </Card.Body>
 
+
+                <Button onClick={() => { setShow(true); }} className="w-50 p-2 mb-2 mx-auto" variant="outline-danger">Cancel Order</Button>
+
                 {/* order Status */}
                 <Card.Footer className=" bg-danger bg-opacity-25">{status}</Card.Footer>
             </Card>
+
+
+
+            {/* modal */}
+            <Modal show={show} onHide={handleClose}>
+
+                <Modal.Body>Are you sure?</Modal.Body>
+                <Modal.Footer>
+
+                    <Button variant="secondary" onClick={() => { handleDeleteOrder(_id) }}>
+                        Yes
+                    </Button>
+                    <Button variant="primary" onClick={handleNoBtn}>
+                        No
+                    </Button>
+                </Modal.Footer>
+            </Modal>
 
         </div>
     );

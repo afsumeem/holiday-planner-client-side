@@ -13,7 +13,7 @@ const Home = () => {
 
             <Carousel className="banner">
 
-                <Carousel.Item>
+                <Carousel.Item >
 
                     {/* carousel image */}
                     <img
@@ -23,9 +23,12 @@ const Home = () => {
                     />
 
                     {/* carouserl cations */}
-                    <Carousel.Caption>
-                        <h3>Let's Your Journey Begins!</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <Carousel.Caption className="mb-5">
+                        <div className="bg-dark bg-opacity-25 p-5 mb-5">
+                            <h2 className="mb-3">Let's Your <span className="text-info">Journey</span> Begins!</h2>
+                            <p>Love to tour but fancy a bit more freedom? With the introduction of Choice Touring by Globus, travel enthusiasts now have a whole new way to cure their curiosity.</p>
+                        </div>
+
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -36,9 +39,11 @@ const Home = () => {
                         alt="Second slide"
                     />
 
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <Carousel.Caption className="mb-5">
+                        <div className="bg-dark bg-opacity-50 p-5 mb-5">
+                            <h2 className="mb-3">World's <span className="text-info">Largest</span> travel platform.</h2>
+                            <p>This exciting new touring style promises all the wonder with a touch of whim and all the fun with the infusion of flexibility.</p>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -48,9 +53,11 @@ const Home = () => {
                         alt="Third slide"
                     />
 
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <Carousel.Caption className="mb-5">
+                        <div className="bg-dark bg-opacity-50 p-5 mb-5">
+                            <h2 className="mb-3"> An online travel agency founded by <span className="text-info">HELLOWORLD</span></h2>
+                            <p>With more than nine decades of introducing travelers to the world’s most beloved destinations, we’ve learned a thing or two about the undiscovered spots that tell the true story behind the country. </p>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
